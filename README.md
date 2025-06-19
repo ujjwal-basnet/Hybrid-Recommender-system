@@ -1,3 +1,14 @@
+# 🔮 Hybrid Recommender System
+
+A hybrid recommender based on 
+
+- ✅ **Collaborative Filtering**  
+  ➕➕➕➕
+- ✅ **Content-Based Filtering**
+
+...for a more **personalized** and **dynamic** recommendation system.
+
+
 ## 🎯 Project Goals
 
 1. Songs dataset — contains information for all songs on the platform like attributes and metadata (content-based)  
@@ -68,6 +79,3 @@ Revenue sources:
 3. Weight assignment strategy:  
 - For old users, assign higher weight to collaborative filtering  
 - For recent users, assign higher weight to content-based filtering
-
----
-
