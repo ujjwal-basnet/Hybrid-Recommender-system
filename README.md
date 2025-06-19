@@ -29,16 +29,6 @@ A hybrid recommender based on
 
 ## 📊 Business Goal Metrics
 
-Spotify revenue streams:  
-- Free users (ad-supported)  
-- Subscription users (ad-free)
-
-Revenue sources:  
-- Ads on free plan  
-- Subscription fees on paid plan
-
-### Key metrics:
-
 1. **User Engagement**  
    Free users listen to more songs due to personalized variety.  
    After 3–5 songs, ads are shown; users can upgrade to ad-free subscription.
@@ -55,20 +45,10 @@ Revenue sources:
 
 ---
 
-## 🏗️ Architecture
-
-**Streamlit app** (input → songs)
-
-1. Based on input songs, suggest 10 similar songs and validate  
-2. Based on those songs, suggest 10 similar songs others are listening to (item similarity) and validate  
-3. Combine weights and build hybrid recommendation
-
----
-
 ## ⚠️ Major Challenges
 
 1. Dataset size: roughly 9.7 million records  
-2. User-item matrix size (unique songs × unique users):  
+ User-item matrix size (unique songs × unique users):  
    - ~60k unique songs  
    - ~1 million unique users  
    - Matrix size ~28 GB — too large to load fully into memory
@@ -76,6 +56,6 @@ Revenue sources:
 **Solution:**  
 - Use **chunking** to process data in parts
 
-3. Weight assignment strategy:  
-- For old users, assign higher weight to collaborative filtering  
-- For recent users, assign higher weight to content-based filtering
+2) weight assigiment  : 
+- For old users, how to  assign higher weight to collaborative filtering  
+ -r recent users,how to assign higher weight to content-based filtering
