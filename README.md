@@ -53,9 +53,9 @@ A hybrid recommender based on
    - ~1 million unique users  
    - Matrix size ~28 GB — too large to load fully into memory
 
-**Solution:**  
-- Use **chunking** to process data in parts
+    **Solution:**  
+    - Use **chunking** to process data in parts
 
-2) weight assigiment  : 
+2. **weight Assigment** 
 - For old users, how to  assign higher weight to collaborative filtering  
- -r recent users,how to assign higher weight to content-based filtering
+ -recent users,how to assign higher weight to content-based filtering
