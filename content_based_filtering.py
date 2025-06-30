@@ -33,12 +33,12 @@ def train_transformer(data):
     
     
     transformer = ColumnTransformer(transformers=[
-        ("frequency_encode", CountEncoder(normalize=True, return_df=True), frequency_encode_cols),
+        ("frequency_encode", CountEncoder(normalize=True), frequency_encode_cols),
         ("ohe", OneHotEncoder(handle_unknown="ignore"), ohe_cols),              
         ("tfidf", TfidfVectorizer(max_features=85), tfidf_col),
         ("standard_scale", StandardScaler(), standard_scale_cols),
         ("min_max_scale", MinMaxScaler(), min_max_scale_cols)
-    ], remainder='passthrough', n_jobs=-1)
+    ], remainder='drop', n_jobs=-1)
     
     transformer.fit(data)
     joblib.dump(transformer , TRANSFORMER_PATH)
@@ -96,7 +96,7 @@ def recommend(song_name, songs_data, transformed_data, k=10):
      
      
     top_k_songs_names= songs_data.iloc[top_k_songs_indices]
-    top_k_list= top_k_songs_names[['name' , 'artist' , 'spotify_preview_url']].reset_index(drop= True)
+    top_k_list= top_k_songs_names[['name' , 'artist' , 'spotify_id']].reset_index(drop= True)
     logger.info(f"Top {k} recommendations for {song_name} :\n {top_k_list}")
     return top_k_list 
 
