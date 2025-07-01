@@ -61,7 +61,7 @@ def save_transformed_data(transformed, save_path):
 def calculate_similarity_scores(input_vector, data):
     logger.info(f"calculating similarity scores ...")
     if input_vector.ndim== 1:
-        input_vector = input_vector.reshpae(1, -1)
+        input_vector = input_vector.reshape(1, -1)
     
     similarity_scores= cosine_similarity(input_vector, data)
     return similarity_scores
