@@ -1,7 +1,7 @@
 import pandas as pd
 import logging
 
-DATA_PATH = "data/Music Info.csv"
+DATA_PATH = "data/Music Info.csv" 
 
 # Configure logger
 logging.basicConfig(
