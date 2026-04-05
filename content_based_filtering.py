@@ -12,7 +12,7 @@ import logging
 import os 
 
 #logger setup 
-logging.basicConfig(Level=logging.INFO , format="%(asctime)s - %(levelname)s - %(message)s")
+logging.basicConfig(level=logging.INFO, format="%(asctime)s - %(levelname)s - %(message)s")
 logger= logging.getLogger(__name__) 
 
 CLEANED_DATA_PATH= "data/cleaned_data.csv" 
