@@ -194,5 +194,8 @@ cython_debug/
 .cursorindexingignor
 /data
 da.py
-rough.ipynb 
+rough.ipynb
 /transformer.joblib
+recom-env/
+*.png
+*.svg
