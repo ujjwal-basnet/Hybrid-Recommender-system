@@ -1,3 +1,63 @@
-*, *::before, *::after {
-  box-sizing: border-box;
+@import "tailwindcss";
+
+@layer base {
+  *, *::before, *::after {
+    box-sizing: border-box;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    background-color: #f8faf9;
+    color: #191c1c;
+    min-height: 100vh;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+}
+
+@layer components {
+  .material-symbols-outlined {
+    font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+  }
+
+  .tonal-shift-header {
+    box-shadow: 0 4px 30px rgba(0, 33, 23, 0.03);
+  }
+
+  .scale-98:active {
+    transform: scale(0.98);
+  }
+
+  .hover-scale-102:hover {
+    transform: scale(1.02);
+  }
+
+  /* Glassmorphism utility */
+  .glass {
+    background: rgba(248, 250, 249, 0.7);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+  }
+
+  /* Custom scrollbar */
+  ::-webkit-scrollbar {
+    width: 8px;
+  }
+
+  ::-webkit-scrollbar-track {
+    background: #f2f4f3;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background: #bfc9c3;
+    border-radius: 4px;
+  }
+
+  ::-webkit-scrollbar-thumb:hover {
+    background: #707974;
+  }
 }
